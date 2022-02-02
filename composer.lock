@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "77c7718d7749b072bec5908336cf60b7",
+    "content-hash": "bf555276e128d25ddd05ee2a849f110d",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -1058,16 +1058,16 @@
         },
         {
             "name": "engaged-nation/doctrine-portal",
-            "version": "dev-master",
+            "version": "dev-rc",
             "source": {
                 "type": "git",
                 "url": "git@github.com:Engaged-Nation/doctrine-portal.git",
-                "reference": "115fec7975a82c690729c5a4c4ba2e1c6a99c0c2"
+                "reference": "4e92cd09a95190873af75243b9858574bd0a989f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Engaged-Nation/doctrine-portal/zipball/115fec7975a82c690729c5a4c4ba2e1c6a99c0c2",
-                "reference": "115fec7975a82c690729c5a4c4ba2e1c6a99c0c2",
+                "url": "https://api.github.com/repos/Engaged-Nation/doctrine-portal/zipball/4e92cd09a95190873af75243b9858574bd0a989f",
+                "reference": "4e92cd09a95190873af75243b9858574bd0a989f",
                 "shasum": ""
             },
             "require": {
@@ -1075,6 +1075,7 @@
                 "php": ">=5.5.9",
                 "zircote/swagger-php": "^2.0"
             },
+            "default-branch": true,
             "type": "project",
             "autoload": {
                 "psr-4": {
@@ -1091,14 +1092,14 @@
             ],
             "description": "The portal doctrine library.",
             "support": {
-                "source": "https://github.com/Engaged-Nation/doctrine-portal/tree/master",
+                "source": "https://github.com/Engaged-Nation/doctrine-portal/tree/rc",
                 "issues": "https://github.com/Engaged-Nation/doctrine-portal/issues"
             },
-            "time": "2022-01-31T17:31:03+00:00"
+            "time": "2022-01-28T19:53:21+00:00"
         },
         {
             "name": "engaged-nation/lib-central-admin-client",
-            "version": "v2.47.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@github.com:Engaged-Nation/lib-central-admin-client.git",
@@ -1116,6 +1117,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^6.0"
             },
+            "default-branch": true,
             "type": "project",
             "autoload": {
                 "psr-4": {
@@ -1134,7 +1136,7 @@
         },
         {
             "name": "engaged-nation/lib-encryption",
-            "version": "v1.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@github.com:Engaged-Nation/lib-encryption.git",
@@ -1154,6 +1156,7 @@
                 "phpunit/phpunit": "^5.6",
                 "symfony/symfony": "3.2.*"
             },
+            "default-branch": true,
             "type": "project",
             "autoload": {
                 "psr-4": {
@@ -1183,16 +1186,16 @@
         },
         {
             "name": "engaged-nation/lib-mgt-client",
-            "version": "v1.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@github.com:Engaged-Nation/lib-mgt-client.git",
-                "reference": "79b8cafec652d7d3ad6722f8bd5ea9963d3db487"
+                "reference": "27fdd95f75051f178b86591c198467128c269c41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Engaged-Nation/lib-mgt-client/zipball/79b8cafec652d7d3ad6722f8bd5ea9963d3db487",
-                "reference": "79b8cafec652d7d3ad6722f8bd5ea9963d3db487",
+                "url": "https://api.github.com/repos/Engaged-Nation/lib-mgt-client/zipball/27fdd95f75051f178b86591c198467128c269c41",
+                "reference": "27fdd95f75051f178b86591c198467128c269c41",
                 "shasum": ""
             },
             "require": {
@@ -1201,6 +1204,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^6.0"
             },
+            "default-branch": true,
             "type": "project",
             "autoload": {
                 "psr-4": {
@@ -1212,33 +1216,33 @@
             ],
             "description": "MGT Api Client Library",
             "support": {
-                "source": "https://github.com/Engaged-Nation/lib-mgt-client/tree/v1.1.0",
+                "source": "https://github.com/Engaged-Nation/lib-mgt-client/tree/master",
                 "issues": "https://github.com/Engaged-Nation/lib-mgt-client/issues"
             },
-            "time": "2018-02-23T01:18:53+00:00"
+            "time": "2020-01-30T19:31:46+00:00"
         },
         {
             "name": "engaged-nation/portal-core",
-            "version": "dev-master",
+            "version": "dev-rc",
             "source": {
                 "type": "git",
                 "url": "git@github.com:Engaged-Nation/portal-core.git",
-                "reference": "6913fe313274cb2108e27ef66ce3737c321c46c7"
+                "reference": "8c261e1a96135fe17134f0e3e00670e4a2221a09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Engaged-Nation/portal-core/zipball/6913fe313274cb2108e27ef66ce3737c321c46c7",
-                "reference": "6913fe313274cb2108e27ef66ce3737c321c46c7",
+                "url": "https://api.github.com/repos/Engaged-Nation/portal-core/zipball/8c261e1a96135fe17134f0e3e00670e4a2221a09",
+                "reference": "8c261e1a96135fe17134f0e3e00670e4a2221a09",
                 "shasum": ""
             },
             "require": {
                 "aws/aws-sdk-php": "^3.19",
                 "consolidation/robo": "^1.0",
                 "doctrine/common": "^2.6",
-                "engaged-nation/doctrine-portal": "dev-master",
-                "engaged-nation/lib-central-admin-client": "^2.0",
-                "engaged-nation/lib-encryption": "^1.0",
-                "engaged-nation/lib-mgt-client": "^1.1",
+                "engaged-nation/doctrine-portal": "dev-rc",
+                "engaged-nation/lib-central-admin-client": "dev-master",
+                "engaged-nation/lib-encryption": "dev-master",
+                "engaged-nation/lib-mgt-client": "dev-master",
                 "guzzlehttp/guzzle": "^6.2",
                 "league/csv": "^8.0",
                 "phake/phake": "^2.3",
@@ -1259,6 +1263,7 @@
                 "consolidation/robo": "^1.0",
                 "phpunit/phpunit": "^5.6"
             },
+            "default-branch": true,
             "type": "project",
             "autoload": {
                 "psr-4": {
@@ -1276,10 +1281,10 @@
             ],
             "description": "The core components for the portal domains.",
             "support": {
-                "source": "https://github.com/Engaged-Nation/portal-core/tree/master",
+                "source": "https://github.com/Engaged-Nation/portal-core/tree/rc",
                 "issues": "https://github.com/Engaged-Nation/portal-core/issues"
             },
-            "time": "2022-02-01T23:33:56+00:00"
+            "time": "2022-02-01T23:33:17+00:00"
         },
         {
             "name": "grasmash/expander",
