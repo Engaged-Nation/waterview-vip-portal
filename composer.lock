@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf555276e128d25ddd05ee2a849f110d",
+    "content-hash": "77c7718d7749b072bec5908336cf60b7",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -1058,16 +1058,16 @@
         },
         {
             "name": "engaged-nation/doctrine-portal",
-            "version": "dev-rc",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@github.com:Engaged-Nation/doctrine-portal.git",
-                "reference": "acc1dbd319c7a3ebca227ace1f56698e122ee3ef"
+                "reference": "115fec7975a82c690729c5a4c4ba2e1c6a99c0c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Engaged-Nation/doctrine-portal/zipball/acc1dbd319c7a3ebca227ace1f56698e122ee3ef",
-                "reference": "acc1dbd319c7a3ebca227ace1f56698e122ee3ef",
+                "url": "https://api.github.com/repos/Engaged-Nation/doctrine-portal/zipball/115fec7975a82c690729c5a4c4ba2e1c6a99c0c2",
+                "reference": "115fec7975a82c690729c5a4c4ba2e1c6a99c0c2",
                 "shasum": ""
             },
             "require": {
@@ -1075,7 +1075,6 @@
                 "php": ">=5.5.9",
                 "zircote/swagger-php": "^2.0"
             },
-            "default-branch": true,
             "type": "project",
             "autoload": {
                 "psr-4": {
@@ -1092,23 +1091,23 @@
             ],
             "description": "The portal doctrine library.",
             "support": {
-                "source": "https://github.com/Engaged-Nation/doctrine-portal/tree/rc",
+                "source": "https://github.com/Engaged-Nation/doctrine-portal/tree/master",
                 "issues": "https://github.com/Engaged-Nation/doctrine-portal/issues"
             },
-            "time": "2021-12-13T18:01:11+00:00"
+            "time": "2022-01-31T17:31:03+00:00"
         },
         {
             "name": "engaged-nation/lib-central-admin-client",
-            "version": "dev-master",
+            "version": "v2.47.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:Engaged-Nation/lib-central-admin-client.git",
-                "reference": "4bab8e9aee0273f4019c55525fedb00bb734a37e"
+                "reference": "a7d3c26c776b59025eca90aafe0a6a25b1aaebc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Engaged-Nation/lib-central-admin-client/zipball/4bab8e9aee0273f4019c55525fedb00bb734a37e",
-                "reference": "4bab8e9aee0273f4019c55525fedb00bb734a37e",
+                "url": "https://api.github.com/repos/Engaged-Nation/lib-central-admin-client/zipball/a7d3c26c776b59025eca90aafe0a6a25b1aaebc7",
+                "reference": "a7d3c26c776b59025eca90aafe0a6a25b1aaebc7",
                 "shasum": ""
             },
             "require": {
@@ -1117,7 +1116,6 @@
             "require-dev": {
                 "phpunit/phpunit": "^6.0"
             },
-            "default-branch": true,
             "type": "project",
             "autoload": {
                 "psr-4": {
@@ -1129,14 +1127,14 @@
             ],
             "description": "Central Admin Api Client Library",
             "support": {
-                "source": "https://github.com/Engaged-Nation/lib-central-admin-client/tree/v2.45.0",
+                "source": "https://github.com/Engaged-Nation/lib-central-admin-client/tree/v2.47.0",
                 "issues": "https://github.com/Engaged-Nation/lib-central-admin-client/issues"
             },
-            "time": "2021-11-30T22:41:31+00:00"
+            "time": "2022-01-27T18:04:21+00:00"
         },
         {
             "name": "engaged-nation/lib-encryption",
-            "version": "dev-master",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:Engaged-Nation/lib-encryption.git",
@@ -1156,7 +1154,6 @@
                 "phpunit/phpunit": "^5.6",
                 "symfony/symfony": "3.2.*"
             },
-            "default-branch": true,
             "type": "project",
             "autoload": {
                 "psr-4": {
@@ -1186,16 +1183,16 @@
         },
         {
             "name": "engaged-nation/lib-mgt-client",
-            "version": "dev-master",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:Engaged-Nation/lib-mgt-client.git",
-                "reference": "27fdd95f75051f178b86591c198467128c269c41"
+                "reference": "79b8cafec652d7d3ad6722f8bd5ea9963d3db487"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Engaged-Nation/lib-mgt-client/zipball/27fdd95f75051f178b86591c198467128c269c41",
-                "reference": "27fdd95f75051f178b86591c198467128c269c41",
+                "url": "https://api.github.com/repos/Engaged-Nation/lib-mgt-client/zipball/79b8cafec652d7d3ad6722f8bd5ea9963d3db487",
+                "reference": "79b8cafec652d7d3ad6722f8bd5ea9963d3db487",
                 "shasum": ""
             },
             "require": {
@@ -1204,7 +1201,6 @@
             "require-dev": {
                 "phpunit/phpunit": "^6.0"
             },
-            "default-branch": true,
             "type": "project",
             "autoload": {
                 "psr-4": {
@@ -1216,33 +1212,33 @@
             ],
             "description": "MGT Api Client Library",
             "support": {
-                "source": "https://github.com/Engaged-Nation/lib-mgt-client/tree/master",
+                "source": "https://github.com/Engaged-Nation/lib-mgt-client/tree/v1.1.0",
                 "issues": "https://github.com/Engaged-Nation/lib-mgt-client/issues"
             },
-            "time": "2020-01-30T19:31:46+00:00"
+            "time": "2018-02-23T01:18:53+00:00"
         },
         {
             "name": "engaged-nation/portal-core",
-            "version": "dev-rc",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@github.com:Engaged-Nation/portal-core.git",
-                "reference": "a031c01d99890f824180744589fa7676977d2884"
+                "reference": "6913fe313274cb2108e27ef66ce3737c321c46c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Engaged-Nation/portal-core/zipball/a031c01d99890f824180744589fa7676977d2884",
-                "reference": "a031c01d99890f824180744589fa7676977d2884",
+                "url": "https://api.github.com/repos/Engaged-Nation/portal-core/zipball/6913fe313274cb2108e27ef66ce3737c321c46c7",
+                "reference": "6913fe313274cb2108e27ef66ce3737c321c46c7",
                 "shasum": ""
             },
             "require": {
                 "aws/aws-sdk-php": "^3.19",
                 "consolidation/robo": "^1.0",
                 "doctrine/common": "^2.6",
-                "engaged-nation/doctrine-portal": "dev-rc",
-                "engaged-nation/lib-central-admin-client": "dev-master",
-                "engaged-nation/lib-encryption": "dev-master",
-                "engaged-nation/lib-mgt-client": "dev-master",
+                "engaged-nation/doctrine-portal": "dev-master",
+                "engaged-nation/lib-central-admin-client": "^2.0",
+                "engaged-nation/lib-encryption": "^1.0",
+                "engaged-nation/lib-mgt-client": "^1.1",
                 "guzzlehttp/guzzle": "^6.2",
                 "league/csv": "^8.0",
                 "phake/phake": "^2.3",
@@ -1263,7 +1259,6 @@
                 "consolidation/robo": "^1.0",
                 "phpunit/phpunit": "^5.6"
             },
-            "default-branch": true,
             "type": "project",
             "autoload": {
                 "psr-4": {
@@ -1281,10 +1276,10 @@
             ],
             "description": "The core components for the portal domains.",
             "support": {
-                "source": "https://github.com/Engaged-Nation/portal-core/tree/rc",
+                "source": "https://github.com/Engaged-Nation/portal-core/tree/master",
                 "issues": "https://github.com/Engaged-Nation/portal-core/issues"
             },
-            "time": "2021-12-21T19:21:02+00:00"
+            "time": "2022-02-01T23:33:56+00:00"
         },
         {
             "name": "grasmash/expander",
