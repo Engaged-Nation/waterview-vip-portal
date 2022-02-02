@@ -1,0 +1,44 @@
+{% extends 'FrontEnd/Resources/views/embed/fzone/contents/includes/vouchers/controller/base.html.twig' %}
+
+{% block response %}
+    {{ 'fzone.voucher.success'|trans({'%voucherAdjectiveLine%': voucherAdjectiveLine, '%voucherTitle%': voucherTitle, '%voucherAmount%': voucherAmount, '%points%': points}, 'frontend')|raw }}
+    <div class="text-center">
+        <div class="modal-button-wrapper">
+            <button class="modal-button-style" onclick="EngagedNation.Callback.DownloadPdf.OnClick(
+                {
+                    'data-downloadpdf-sourceurl': 'api/public/user/voucher/download?usersVouchersId=' + encodeURIComponent('{{ publicUserVoucherId|e('js') }}'),
+                    'data-downloadpdf-filename': '{{ voucherTitle }}',
+                    'data-downloadpdf-orientation': 'portrait'
+                }
+                );"
+            >
+                DOWNLOAD YOUR REWARD
+            </button>
+            <button class="modal-button-style view-my-prizes-btn redeem-success-view-my-prize-link">
+                VIEW MY PRIZES
+            </button>
+        </div>
+    </div>
+
+    <script>
+        EngagedNation.RequireJS.require(
+            ['jquery_1_10'],
+            function($)
+            {
+                'use strict';
+
+                $(function () {
+                    var currencyName = $('html').attr('data-currencyName') ? $('html').attr('data-currencyName') : 'Credits',
+                        successMessage = $('.custom-redeem-success .lbxgrid-box .modal-body-style span.currency');
+
+                    successMessage.text(successMessage.text().replace("__points__", currencyName));
+
+                    $(document).on('click', '.lbxgrid .redeem-success-view-my-prize-link', function () {;
+                        $('#view-my-voucher-btn').click();
+                        $('.lbxgrid-close span').trigger("click");
+                    });
+                });
+            }
+        );
+    </script>
+{% endblock response %}

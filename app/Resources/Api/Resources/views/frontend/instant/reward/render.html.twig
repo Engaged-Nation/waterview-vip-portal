@@ -1,0 +1,35 @@
+{% extends 'Api/Resources/views/frontend/instant/reward/render/base.html.twig' %}
+
+{% block instantRewardRewards %}
+    {% if returningUser %}
+        <p class="reward-completed-info">{{ 'fzone.instantRewards.completed.p1'|trans({}, 'frontend') }}</p>
+        {% if rewardsInfo.points %}
+            <div class="reward-list-group-item">
+                <div class="reward-list-points">
+                    {{ rewardsInfo.points|number_format }} {{ client.alias_points }}
+                </div>
+            </div>
+        {% endif %}
+        {% if rewardsInfo.drawingEntries %}
+            <div class="reward-list-group-item">
+                <div class="reward-list-drawing-entries">
+                    {{ rewardsInfo.drawingEntries|number_format }} {% if rewardsInfo.drawingEntries > 1 %}
+                        {{ 'api.gameCompleted.prize.drawingEntries'|trans({}, 'frontend') }}
+                    {% else %}
+                        {{ 'api.gameCompleted.prize.drawingEntry'|trans({}, 'frontend') }}
+                    {% endif %}
+                </div>
+            </div>
+        {% endif %}
+        {% if rewardsInfo.experience %}
+            <div class="reward-list-group-item">
+                <div class="reward-list-experience">
+                    {{ rewardsInfo.experience|number_format }} {{ global_en_config.getDatabaseConfig('alias_experience') }}
+                </div>
+            </div>
+        {% endif %}
+        <p class="reward-completed-info">{{ 'fzone.instantRewards.completed.p2'|trans({}, 'frontend') }}</p>
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

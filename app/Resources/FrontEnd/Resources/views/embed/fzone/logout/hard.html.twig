@@ -1,0 +1,49 @@
+<div id="theme-display-logout-box" class="hard" style="display: none;">
+    <div class="loginForm col-md-12">
+        <div id="account" class="logged-out-account">
+            <div class="header-logo">
+                <img class="img-responsive" src="{{ global_en_config.environment.s3_uploads_url ~ '/images/logos/loggedout/PFF-' ~ global_en_config.getClientAlias() ~ '.png' }}" />
+            </div>
+            <div class="header-p">
+                THANK YOU FOR PLAYING
+            </div>
+            <p>{{ 'fzone.me.logout.hard'|trans({'%cname%' : cname}, 'frontend')|raw }}</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    EngagedNation.RequireJS.require(
+        ["jquery_1_10"],
+        function($)
+        {
+            $(function () {
+                $('body').css('padding-bottom', 0);
+            });
+
+            function setThemeDisplayLogoutBoxHeight() {
+                $('#theme-display-logout-box').height($(window).height());
+                $('#theme-display-logout-box .background-center').height($(window).height());
+            }
+
+            $('body').addClass('theme-display-on-logout');
+
+            var windowResizeOnTimeout;
+
+            $(window).on('resize', function() {
+                clearTimeout(windowResizeOnTimeout);
+                windowResizeOnTimeout = setTimeout(setThemeDisplayLogoutBoxHeight, 250);
+            });
+
+            setThemeDisplayLogoutBoxHeight();
+
+            $(
+                function() {
+                    $('#theme-display-logout-box').fadeIn(700);
+                }
+            )
+
+        }
+    )
+</script>
+

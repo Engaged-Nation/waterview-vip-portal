@@ -1,0 +1,10 @@
+{% if hasTerms %}
+    <div class="box-sm-body">
+        <div class="onresp">
+            <label>
+                <input type="checkbox" name="agreex" /><span class="h4-subheadline">I agree to the </span>
+                <a class="terms-and-conditions-link" data-gtm-dimension="Rules and Terms" href="{{ s3Url }}/images/pdf/rules-terms.pdf" target="_blank">{{ "fzone.termsAndCondtions.input1"|trans({}, "frontend" )|raw }}</a>
+            </label>
+        </div>
+    </div>
+{% endif %}

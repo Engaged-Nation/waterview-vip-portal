@@ -1,0 +1,97 @@
+{% set portalCoreAssetsUrl = 'https://s3-us-west-2.amazonaws.com/portalcore-assets/' %}
+
+<div id="theme-display-logout-box" class="pre" style="display: none;">
+    <div class="loginForm col-md-12">
+        <div id="account" class="logged-out-account">
+            <div class="header-logo">
+                <div>
+                    <img class="img-responsive" src="https://place-hold.it/322x245" />
+                </div>
+            </div>
+
+            <div class="subheader-p">{{ 'fzone.me.logout.pre.title'|trans({}, 'frontend')|raw }}</div>
+
+            <div id="countdownTimerMessageStart" style="display: none;">
+                <div style="margin-top: 20px;">{{ 'fzone.me.logout.pre.countdownTimerMessageStart'|trans({}, 'frontend')|raw }}</div>
+            </div>
+
+            <div id="countdownTimerMessageEnd" style="display: none;">
+                <div style="margin-top: 20px;">{{ 'fzone.me.logout.pre.countdownTimerMessageEnd'|trans({}, 'frontend')|raw }}</div>
+            </div>
+
+            <div class="header-p">
+                {{ 'fzone.me.logout.pre.headline'|trans({}, 'frontend')|raw }}
+            </div>
+
+            <div class="iframeWrapper">
+                <iframe id="countdown-timer-container"
+                        src="{{ portalCoreAssetsUrl ~ 'countdown-timer-configurable/index.html' }}" width="100%"
+                        frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                <script src="{{ portalCoreAssetsUrl ~ 'countdown-timer-configurable/countdown-init.js' }}"></script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    EngagedNation.RequireJS.require(
+        ["jquery_1_10"],
+        function($)
+        {
+            $(function () {
+                $('body').css('padding-bottom', 0);
+            });
+
+            function setThemeDisplayLogoutBoxHeight() {
+                $('#theme-display-logout-box').height($(window).height());
+                $('#theme-display-logout-box .background-center').height($(window).height());
+            }
+
+            $('body').addClass('theme-display-on-logout');
+
+            var windowResizeOnTimeout;
+
+            $(window).on('resize', function() {
+                clearTimeout(windowResizeOnTimeout);
+                windowResizeOnTimeout = setTimeout(setThemeDisplayLogoutBoxHeight, 250);
+            });
+
+            setThemeDisplayLogoutBoxHeight();
+
+            $(
+                function() {
+                    $('#theme-display-logout-box').fadeIn(700);
+                }
+            );
+
+            var countDownTimerMessageStart = $('#countdownTimerMessageStart').html(),
+                countDownTimerMessageEnd = $('#countdownTimerMessageEnd').html();
+
+            $('#countdown-timer-container').on('load', function () {
+                EngagedNation.Callback.CountdownTimer.addWindowMessageEventListener();
+                EngagedNation.Callback.CountdownTimer.addWindowResizeEventListener();
+                EngagedNation.Callback.CountdownTimer.initCountdownTimer({
+                    countdownTimer: {
+                        action: 'init', config: {
+                            timerBackgroundClass: 'gradient-linear-blue',
+                            messages: {
+                                start: countDownTimerMessageStart,
+                                end: countDownTimerMessageEnd
+                            },
+                            year: 2020,
+                            month: 3,
+                            day: 15,
+                            fonts: {
+                                messages: {family: '\'Roboto-Bold\', sans-serif', color: '#939597'},
+                                numbers: {family: '\'Roboto-Bold\', sans-serif', color: '#ffffff'},
+                                labels: {family: '\'Roboto-Bold\', sans-serif'}
+                            }
+                        }
+                    }
+                });
+            });
+
+        }
+    )
+</script>
+

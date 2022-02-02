@@ -1,0 +1,100 @@
+{% extends 'FrontEnd/Resources/views/emails/base/base-registration.html.twig' %}
+
+{% set brandColor = '#004689' %}
+
+{% block headerContainer %}
+    {% include 'FrontEnd/Resources/views/emails/header.html.twig' %}
+{% endblock %}
+
+{% block bodyContainer %}
+    <table align="center" width="100%" cellpadding="10px" style="background-color:#ffffff;">
+        <tr>
+            <td>
+                {% block bodyContent %}
+                    <table cellpadding="10px">
+                        <tr>
+                            <td align="center">
+                                <span style="font-size:2.4em; font-weight:bold; color:{{ brandColor }};">{{ 'emailConfirmation.body.header'|trans({'%points_per_register%': pointsPerRegister|number_format, '%fname%': firstName}, 'frontend')|raw }}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table cellpadding="5px">
+                                    <tr>
+                                        <td>
+                                            <span>
+                                                Thank you for registering and having fun on the <em>$2 Million Pro Football Frenzy</em> demo site!
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>Don't forget that this fully-automated gamified marketing system includes:</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table align="center" width="95%">
+                                                <tr>
+                                                    <td>&bull; $2 million of insured prizes</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&bull; 1 pre-season training camp week</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&bull; 17 weeks of non-stop regular season pick 'em action</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&bull; 4 weeks of playoffs & Big Game action</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&bull; Daily interactive games & activities</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&bull; Virtual participation currency</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&bull; Instant segmented rewards</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&bull; Leveling up, leaderboards & trophies</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&bull; And much, much more!</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Huddle up with our gamification experts today to learn how the
+                                            <em>$2 Million Pro Football Frenzy</em> can drive you into the red zone of
+                                            incremental profitable visits.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table align="center">
+                                    <tr>
+                                        <td>
+                                            <table align="center" cellpadding="20px">
+                                                <tr>
+                                                    <td style="background-color:{{ brandColor }};">
+                                                        <a title="Confirm Now" href="{{ confirmLink }}" target="_blank" style="color:#ffffff; font-weight:bold; text-decoration:none;">
+                                                            Click Here To Confirm
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                {% endblock %}
+            </td>
+        </tr>
+    </table>
+{% endblock %}

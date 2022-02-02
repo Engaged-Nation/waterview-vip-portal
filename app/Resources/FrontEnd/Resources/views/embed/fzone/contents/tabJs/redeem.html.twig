@@ -1,0 +1,176 @@
+<div id="redeem" class="pagi">
+    {% if list is empty %}
+        {{ 'fzone.redeem.comingsoon'|trans({'%points%': points, '%cname%':cname}, 'frontend')|raw }}
+
+    {% else %}
+        {% set saleClass = '' %}
+
+        <h1 class="h1-headline dynamicHeadline">{{ "fzone.redeem.pageDescription"|trans({}, 'frontend')|raw }}</h1>
+
+        <!-- Featured Voucher Section -->
+        {% set featuredVoucherIds = [] %}
+
+        {% if featuredVouchers %}
+            <h2 class="h2-subheadline">{{ "fzone.redeem.featuredVoucherSubHeader"|trans({}, 'frontend') }}</h2>
+
+            <div class="row featured">
+                {% for voucher in featuredVouchers %}
+                    {% set featuredVoucherIds = featuredVoucherIds|merge([voucher.id]) %}
+
+                    <div class="col-md-6">
+                        {% if voucher.available == voucher.sold %}
+                            <div class="tag">
+                                <div class="soldout"></div>
+                            </div>
+                        {% endif %}
+
+                        {% if voucher.featured_thumbnail is not empty %}
+                            {% set image = voucher.featured_thumbnail %}
+                        {% else %}
+                            {% set image = imgDefault %}
+                        {% endif %}
+
+                        <div class="rewardWrapper center-block">
+                            <div class="pop items doZoomHover box-shadow"
+                                data-item="vouchers"
+                                data-id="{{ voucher.id }}">
+                                <img class="enPortal-img-responsive transition" src="{{ img ~ image }}"/>
+                            </div>
+
+                            <div class="ask pad5">
+                                <div>
+                                    <span class="goGold redeemPrice">{{ voucher.price|number_format }} {{ points }}</span>
+                                    <br/>
+                                    {% if voucher.title|length > 70 %}
+                                        {{ voucher.title[:70] }}
+                                    {% else %}
+                                        {{ voucher.title }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <!-- End of Featured Voucher Section -->
+
+        <!-- Available Voucher -->
+        <h2 class="h2-subheadline dynamicSubheadline">{{ "fzone.redeem.voucherSubHeader"|trans({}, 'frontend')|raw }}</h2>
+
+        {% if global_en_config.getDatabaseConfig('is_sale_enabled') %}
+            <h2 id="saleDescription" class="h2-subheadline">
+                <span class="en-font-animations-fire">Super Sale</span>
+                <span class="saleDate">START_DATE - END_DATE</span>
+            </h2>
+            <p class="saleBodyText">
+                Get even more of the rewards you want most during our Sale.<br />
+                Limited quantities available.
+                Get yours before time runs out!
+            </p>
+        {% endif %}
+
+        <ul class="noselect nofloat dlistb" style="text-align: center">
+            {% for voucher in list if voucher.id not in featuredVoucherIds %}
+                <li class="tcursor">
+                    {% if voucher.available == voucher.sold %}
+                        <div class="tag">
+                            <div class="soldout"></div>
+                        </div>
+                    {% endif %}
+
+                    {% if voucher.thumbnail is not empty %}
+                        {% set image = voucher.thumbnail %}
+                    {% else %}
+                        {% set image = imgDefault %}
+                    {% endif %}
+
+                    <div class="rewardWrapper" data-item="vouchers" data-id="{{ voucher.id }}">
+                        <div class="pop items doZoomHover box-shadow">
+                            <img class="enPortal-img-responsive transition" src="{{ img ~ image }}"/>
+                        </div>
+
+                        <div class="ask pad5">
+                            <div>
+                                <div class="rewardLink">
+                                    <button class="button">VIEW DETAILS</button>
+                                </div>
+
+                                {% if global_en_config.getDatabaseConfig('is_sale_enabled') %}
+                                    {% set saleClass = 'en-font-animations-fire' %}
+                                    {% if voucher.grp_note %}
+                                        <div class="saleBeforeDealWrapper">
+                                            <span class="saleBeforeDeal">{{ voucher.grp_note|number_format }} {{ points }}</span>
+                                        </div>
+                                    {% endif %}
+                                {% endif %}
+
+                                <span class="goGold redeemPrice">{{ voucher.price|number_format }} <span>%points%</span></span>
+                                <br/>
+                                {% if voucher.title|length > 70 %}
+                                    {{ voucher.title[:70] }}
+                                {% else %}
+                                    {{ voucher.title }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        <!-- End of Available Voucher -->
+
+        <script>
+            EngagedNation.RequireJS.require(
+                ['jquery_1_10'],
+                function($)
+                {
+                    'use strict';
+
+                    var trig = true;
+
+                    $(function () {
+                        $('#redeem .rewardWrapper').unbind('click').bind('click', function () {
+                            var this_ = $(this);
+                            $.lbxgrid({html: 'Loading content...Please wait'});
+
+                            if (trig) {
+                                trig = false;
+
+                                $.ajax({
+                                    dataType: 'jsonp',
+                                    jsonp: 'callback',
+                                    cache: false,
+                                    url: '{{ fhost|e("js") }}/embed/index.php?embed={{ embed|e("js") }}&id={{ id|e("js") }}&pageid={{ pageid|e("js") }}&include=' + this_.attr('data-item') + '&itemId=' + this_.attr('data-id'),
+                                    success: function (data) {
+                                        $.lbxgrid({
+                                            html: data.html,
+                                            addClass: 'custom-redeem',
+                                            maxWidth: 500,
+                                            fnOnLoad: function () {
+                                                $(this).find('input[type=text]').focus();
+                                            }
+                                        });
+
+                                        trig = true;
+                                    }
+                                });
+                            }
+                        });
+
+                        var currencyName = $('html').attr('data-currencyName') ? $('html').attr('data-currencyName') : 'Credits',
+                            dynamicSubheadline = $('.dynamicSubheadline'),
+                            redeemPrice = $('.rewardWrapper .redeemPrice');
+
+                        $('.dynamicHeadline').text(currencyName + ' REWARDS');
+                        dynamicSubheadline.text(dynamicSubheadline.text().replace("%points%", currencyName));
+                        redeemPrice.each(function() {
+                            var price = $(this);
+                            price.html(price.html().replace("%points%", currencyName));
+                        });
+                    });
+                }
+            );
+        </script>
+    {% endif %}
+</div>

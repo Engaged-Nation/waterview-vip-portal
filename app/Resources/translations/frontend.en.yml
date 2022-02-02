@@ -1,0 +1,873 @@
+#
+# html+ means html tags are allowed (htmlentities is not used).
+# >- symbols allows a multiline format, line break will be converted to space and \n will be removed at the end of string.
+#
+# https://symfony.com/doc/current/components/yaml/yaml_format.html
+#
+
+#
+# fzone
+#
+fzone:
+  #
+  # tabs button title
+  #
+  tabs:
+    welcome: "Pro Football Frenzy"
+    nflfootballmain: "SCRAMBLE"
+
+  meArea:
+    drawingEntries: "Drawing Entries"
+
+  instantRewards:
+    header: "TOUCHDOWN!"
+    subheader: "You Won"
+    prize:
+      points: "%points% %aliasPoints%"
+      experience: "%experience% %aliasExperience%"
+      drawingEntries: "%entries% DRAWING ENTRIES"
+    completed:
+      p1: "You have already played this game today and received"
+      p2: "Please come back tomorrow and play again to earn more!"
+
+  gameCompleted:
+    prize:
+      drawingEntries: "<p class='instant-reward-entries'>%entries% Drawing Entries</p>"
+      drawingEntry: "<p class='instant-reward-entries'>%entries% Drawing Entry</p>"
+
+  #
+  # brackets response
+  #
+  brackets:
+    noTieBreaker: "Please enter your Playoff Game Total Points Scored by Both Teams"
+    invalidTieBreaker: "Please enter your Playoff Game Total Points Scored by Both Teams in numeric value"
+    missingPicks: "Please complete your picks!"
+    thankYou: "
+      <div class='lbxgrid-box lbxgrid-box-margin'>
+      <center>
+      <h1 class='modal-h1-style'><strong>Congratulations!</strong></h1><br />
+      <h2 class='modal-h1-style modal-noBold-style'>You Completed Your <i>Pro Football Frenzy Bracket</i></h2>
+      <p class='modal-p-style'>You can activate your bracket at the Casino kiosk in one hour.</p>
+      <p class='modal-p-style'><strong>Don't forget,</strong> you must activate your bracket before <strong>Sunday,
+      March 18</strong> at <strong>5PM (EST).</strong></p>
+      </center>
+      </div>"
+
+  marchmania:
+    drawingEntries: "Drawing Entries"
+
+
+  bracketsOverview:
+    description: "<span style=\"font-size:14px; display:inline-block;\">All brackets must be <strong>activated at the
+      property</strong> no later than <strong>6PM</strong> on <strong>Sunday, March 18!</strong></span>"
+    kioskStatus:
+      success: "Thank you, your bracket has been submitted. Swipe and activate at a Passport Kiosk before Sunday, March 18, at 5PM (EST)."
+      fail: "Thank you, your bracket has been submitted. You can activate it at a Gun Lake Passport kiosk in one hour."
+
+  #
+  # profile box - name, points, icons
+  #
+  me:
+    logout:
+      title: "<div class=\"h1-headline\">Join the Frenzy</div>
+        <div class=\"h2-subheadline\">Sign in to Play Now!</div>"
+      register: "Register"
+      facebook: 'Sign up for your chance to win <span class="goGold">$1,000,000</span> for making perfect regular-season team picks and a share of $___ thousand in guaranteed cash and prizes!'
+      login: "Login"
+      forgotpassword: "Forgot Login?"
+      placeholders:
+        username: "Email Address"
+        password: "Password"
+      titles:
+        username: "Email Address to Sign In"
+        forgotpassword: "Forgot Password"
+      copyright: "&copy; %year% %cname%. All Rights Reserved."
+      rememberMe: "REMEMBER ME"
+      pre:
+        title: 'Sign up between <span class="highlighted_text">3/5 through 3/18</span> for your chance to win
+          <span class="highlighted_text">$1 Million</span> for filling out a perfect bracket and your share of $___
+          thousand in guaranteed cash and prizes.'
+        headline: "CTA GOES HERE"
+        countdownTimerMessageStart: 'AND COUNTING'
+        countdownTimerMessageEnd: 'STAY TUNED, THE SITE IS LAUNCHING SOON'
+      during:
+        title: 'Sign in and Play Now'
+        subtitle: 'to Earn Free Rewards!'
+      hard: 'The $1,000,000 Pro Football Frenzy program is now over. We hope you enjoyed the program and look forwrd to seeing you at %cname% soon.'
+      soft:
+        p1: '<span class="goGold">Join Us for the Grand Finale Drawing at [date and time]. to Win Your Share of [xxxx] in Cash & Prizes. Good luck!</span>'
+        p2: "To check the status of your picks, view your account, rewards and grand finale details, you can log in until Wednesday,
+          January 8, 2020. We hope you enjoyed the program and look forward to seeing you at %cname% for the big event!"
+
+    icons:
+      blitz: "Blackout Blitz"
+      predictions: "Crystal Ball Predictions"
+      pigskin: "Pigskin<br>Pick 'Em"
+      achievements: "XP Points"
+      leaderboard: "Leaderboards"
+      playoff: "Playoffs"
+      frenzy: "Playoff Frenzy"
+
+  #
+  # login response
+  #
+  login:
+    username: "Please enter your email address"
+    incorrect: "<div class=\"wrongpass-wrapper\">
+        <div class=\"wrongpass-headline\">LOGIN UNSUCCESSFUL</div>
+        <div class=\"body-p-left\">
+          The password you entered was incorrect. Please close this message and try again.
+        </div>
+        <div class=\"body-p\">
+          <div class=\"wrongpassbold\">NEED TO RESET YOUR PASSWORD?</div>
+          If so, press the button below.
+        </div>
+        <div class=\"body-p btn-container\">
+          <button type=\"button\" class=\"modal-button-style btn-reset-password\" onclick=\"$('.lbxgrid .xclose span').click();\">RESET PASSWORD</button>
+        </div>
+      </div>"
+    welcome: ""
+    welcomeBack: ""
+    notfound: "<div class=\"wrongemail-header\">We're sorry</div>
+      <div class=\"wrongemail-bodycopy\">
+        The email address you entered does not appear in our database.<br>Please try again or Sign Up to register for an account.</div>
+      </div>"
+
+
+  #
+  # registration
+  #
+  register:
+    description: "<h2 class=\"h1-headline\">Welcome to<br> %program%</h2>
+      <p class=\"body-p-lowercase\">
+        Fill out the form below to register for an account
+        and get access to all our fun, free games, exciting
+        prizes and more!
+      </p>
+      <p class=\"body-p-lowercase\">Must be 21 years of age or older to participate.</p>"
+    optinemail: "<span class=\"h4-subheadline\">Opt-in to email</span>"
+
+    response: # response when completing registration
+      iprestriction: '
+        <div class="forgot-password-header">REGISTRATION INCOMPLETE</div>
+        Unfortunately, we could not register you for an account.<br/><br/>
+        Another individual already registered for an account from this IP address.<br><br>
+        If you believe you received this message in error,
+        <a class="btn-display-user-form-help text-link" data-gtm-dimension="v2/Logged_Out/Initial/Link_Success/Help" data-gtm-force-stat="1">contact us</a>
+         for further assistance.'
+
+      email2: "Your email already exists within our system. Please contact us if this is a mistake."
+      emailsubj: "Thanks for registering and having fun"
+
+
+      #
+      # is using emailtmpl.php
+      #
+      completed: "
+        <h3>Verify and Win!</h3>
+        <p>Check your email and click on the button to confirm your email address is valid.</p>
+        <p>We'll give you 210 Slam Dunk Drawing Entries after your account is verified!</p>"
+
+      success: "<h3>Congratulations!</h3><p>Your account has been activated.</p>"
+      playerscard1: "You must enter your rewards card number"
+
+  logout: ""
+
+  #
+  # forgot password
+  #
+  forgotpassword:
+    title: "Forgot Password"
+    p1: 'Please enter the email address associated with your account and we will send you an email
+      with a link so that you can reset your password.</p><p>If you don’t know what your email address is, please
+      <a class="logout-modal-help-page" data-gtm-dimension="Logout/Forgot_Password/Sitefeedback" data-gtm-force-stat="1">contact us</a> for further assistance.'
+    p2: "Your email already exists within our system. Please enter your email address. We will send you a link to reset your password."
+
+  #
+  # password reset extended - sending instruction to email
+  #
+  passwordresetrq:
+    email: "Please enter the email address you used to register your account. We will send you a link to reset your password."
+    success: "Your Forgot Password request was successful. Please check your email."
+    emailtosendheader: "Your Pro Football Frenzy Password Request"
+
+  #
+  # sitefeedback
+  #
+  sitefeedback:
+    header: "
+      <p>
+        With our exclusive %program% program, you can enjoy a wide variety of fun games and activities, earn special rewards and participate in %program%-only online events. Play every day to earn %points%, then exchange them for the rewards of your choice to make your next visit to Star Casino & Resort even more exciting.
+      </p>
+      <p>
+        Get your players excited about all the perks they'll enjoy when they play on your customized portal.  Add messages to explain about how rewards integrate with your players club, give them hints about upcoming portal promotions you might be running or just welcome them to the experience.
+      </p>
+      "
+    navTabs: '
+      <ul id="help-tab" class="nav nav-tabs enPortal-row no-gutter">
+          <li role="presentation" class="active enPortal-col-xs-12 enPortal-col-md-3"><a href="#help" aria-controls="help" role="tab" data-toggle="tab" data-gtm-dimension="Help/About">About %program%</a></li>
+          <li role="presentation" class="enPortal-col-xs-12 enPortal-col-md-3"><a href="#faqs" aria-controls="faqs" role="tab" data-toggle="tab" data-gtm-dimension="Help/FAQS">Program Results</a></li>
+          <li role="presentation" class="enPortal-col-xs-12 enPortal-col-md-2"><a href="#rules" aria-controls="rules" role="tab" data-toggle="tab" data-gtm-dimension="Help/Official Rules">Rules</a></li>
+          <li role="presentation" class="enPortal-col-xs-12 enPortal-col-md-4"><a href="#terms" aria-controls="terms" role="tab" data-toggle="tab" data-gtm-dimension="Help/TermsAndConditions">Terms &amp; Conditions</a></li>
+      </ul>
+      '
+    form:
+      title: "%program% HELP"
+      description: "<div class=\"body-p-left\">
+        Please fill out the form below to get assistance with the <span class=\"goYellow\"><em>%program%</em></span> program.
+        </div>"
+      captcha: "<span class=\"body-p-lowercase\">Please enter the CAPTCHA seen above into the box below without spaces.</span>"
+      thankyou: '<div class="wrongpass-wrapper">
+        <div class="wrongpassbold">WE’RE ON IT!</div><p></p>
+        <p class="body-p-left">Thank you for contacting us.</p>
+        <p class="body-p-left">Your comments were successfully submitted to our <em>%programName%</em> team.</p>
+        <p class="body-p-left">We’ll be in touch with more information as soon as possible.</p>'
+    response:
+      success: '<div class="wrongpass-wrapper">
+        <div class="wrongpassbold">WE’RE ON IT!</div><p></p>
+        <p class="body-p-left">Thank you for contacting us.</p>
+        <p class="body-p-left">Your comments were successfully submitted to our <em>%programName%</em> team.</p>
+        <p class="body-p-left">We’ll be in touch with more information as soon as possible.</p>'
+
+
+  #
+  # my vouchers tab
+  #
+  myvouchers:
+    expirationdate: ""
+    header: ""
+    novouchers: "You do not have any rewards to redeem at this time."
+
+    bodycopy: "<p class=\"body-p\">View your active prizes and redeem them by displaying this page on a mobile device to
+      a representative before the expiration date.  You can also download and display the voucher PDF to a
+      representative on your mobile device, or you can print it out and bring it with you.</p>"
+
+    details: '<p class="myvoucher-issuedTo" style="display: none;"><span class="goGold">Player Name</span>: %issuedTo%</p>
+      <p class="myvoucher-nickName" style="display: none;"><span class="goGold">Nickname</span>: %nickname%</p>
+      <p class="myvoucher-playersCard" style="display: none;"><span class="goGold">Players Card Number</span>: %playerscard%</p>
+      <p class="myvoucher-issuedDate" style="display:none;"><span class="goGold">Date Issued</span>: %issued_date%</p>
+      <p class="myvoucher-expireDate" style="display:none;"><span class="goGold">Expiration Date</span>: %expire_date%</p>
+      <p class="myvoucher-vid" style="display:none;"><span class="goGold">Voucher Id</span>: %vid%</p>
+      <p class="myvoucher-description" style="display:none;"><span class="goGold">Description</span>: %description%</p>
+      <p class="myvoucher-legal" style="display:none;"><span class="goGold">Legal</span>: %legal%</p>'
+
+    instruction:
+      txt1: "PLEASE PRINT THIS VOUCHER OFF YOUR LOCAL PRINTER"
+      txt2: "TAKE THIS PRINTED VOUCHER TO THE ENGAGED NATION PLAYERS CLUB DESK"
+      txt3: "AN ENGAGED NATION EMPLOYEE WILL VALIDATE THIS VOUCHER AND PRESENT YOU WITH YOUR REWARD"
+
+    how_info:
+      txt1: >-
+        <span style="color: #004689 !important;">INSTRUCTIONS -</span> The name printed on this voucher MUST match your
+        government issued photo ID to receive your prize
+      txt2: "<span style=\"color: #004689 !important;\">VOUCHER TYPE :</span> %voucher_type%" #html+
+      txt3: "<span style=\"color: #004689 !important;\">MEMBER SINCE :</span> %register_date%" #html+
+      txt4: "<span style=\"color: #004689 !important;\">ISSUED TO :</span> %info_name%" #html+
+      txt5: "<span style=\"color: #004689 !important;\">PLAYERS CARD NUMBER :</span> %playerscard%" #html+
+      txt6: "<span style=\"color: #004689 !important;\">FCODE :</span> %fcode%" #html+
+
+    when_info:
+      txt1: "<span style=\"color: #004689 !important;\">LEGAL -</span> %legal_info%" #html+
+      txt2: "<span style=\"color: #004689 !important;\">ISSUED DATE :</span> %issued_date%" #html+
+      txt3: "<span style=\"color: #004689 !important;\">EXPIRE DATE :</span> %expire_date%" #html+
+      txt4: "<span style=\"color: #004689 !important;\">VID :</span> %vip_code%" #html+
+
+    footer: ""
+    alreadyclaimed: "THIS REWARD WAS EMAILED TO YOU ON %issued_date%"
+
+  #
+  # invite a friend
+  #
+  invites:
+    sent:
+      title: "<h1 class='h1-headline-smaller'>Invitations You've Sent</h1>"
+    title: "<h1 class='h1-headline-smaller'>More Friends, More Fun!</h1>"
+    p1: "
+      <div class=\"body-p-lowercase\">
+        Invite your friends to join the frenzy and you'll earn a nice reward for each person that registers!
+      </div>
+      <br>
+      <div class=\"body-p-lowercase\">
+        Enter the email addresses of those you wish to invite in the field below.
+      </div>"
+    p2: "<div class=\"body-p-lowercase\">(Use a comma to separate each address.)</div><br>"
+
+  #
+  # fill in the blank
+  #
+  fitb:
+    p1: '
+      <div style="margin-bottom:10px;">
+        One of our effective edutainment stars, this activity is an engagement must. Customers need to find, read and remember specific details in your promotions, events, products and services pages in order to complete this brainteaser. It''s always one of the most played, effective activities in the program!
+      </div>'
+    learntoplayinfo: "Simply search, find and fill in the blank below with the answer. Participate each day to earn %points%."
+
+  #
+  # quiz
+  #
+  quiz:
+    title: "Pigskin Predictions"
+    p1: ""
+    response:
+      wronganswer: "<p class='modal-header-style'>GOOD LUCK!</p>
+        <p class='modal-body-style'>If you made the right call, you'll earn <span class='points-awarded-style'>100 Drawing
+        Entries</span>!"
+
+  #
+  # trivia
+  #
+  trivia:
+    p1: ""
+    response:
+      wrong: "<p class='modal-body-style'>So Close! Unfortunately, the answer was <span class='points-awarded-style'>%correctSingleAnswer%</span> - but please come back tomorrow for a fun, new question!</p>"
+
+
+
+  #
+  # match3
+  #
+  match3:
+    p1: "Award players for their engagement time with an instant reward. A fan favorite, this fun activity can be programmed to provide instant wins, virtual currency or drawing entries."
+
+  #
+  # scratch card
+  #
+  scratchcard:
+    p1: "<p style=\"max-width: 500px; text-align: center; margin: 0px 0px 0px 30px;\">This popular game needs no introduction. A player favorite, this instant win game allows players to get a quick \"hit\" of virtual credits, an instant reward or drawing entries!<br /><br />Click and scratch your card to reveal your reward.</p>" #html+
+
+  #
+  # three card monte
+  #
+  threecardmonte:
+    p1: "<p style=\"text-align:center;\">Challenge players to find the right card and boost engagement.<br> This will keep customers coming back every day to beat their best scores!</p>" #html+
+
+  #
+  # wordsearch
+  #
+  wordsearch:
+    p1: ""
+
+  #
+  # pick4
+  #
+  pick4:
+    marketing1: '
+      <p>
+        A quick, fun way to provide instant rewards, virtual currency or drawing entries. Customized graphics will complement your current promotions or events to build more awareness.
+      </p>'
+
+  #
+  # spin n win
+  #
+  wheelgame:
+    marketing1: ''
+    winnerTxt: 'Congratulations! You have earned %awarded% %points%.'
+    no-consecutive-success:
+      header1: "<p id='wheelgame-instant-reward'class='instant-reward-header'>Congratulations!</p>"
+      header2: "<p id='wheelgame-instant-reward' class='instant-reward-subheader'>You've won</p>"
+      body: "<p id='wheelgame-instant-reward'class='instant-reward-points'>%points% %awardedpoints%</p>"
+
+
+  #
+  # my voucher awarded and btn
+  #
+  awardedVoucher:
+    thankYouVoucherPick4: "Thank You For Playing!<br /> You were awarded <span id=\"scratchcard-voucherTitle\">%voucherTitle%</span>."
+
+
+
+  #
+  # earn tab
+  #
+  earn:
+    header: "<p>Let the fun begin! Select one of our feature game icons below to play and earn %currency% or challenge yourself with U Pick 'Em, classic casino & arcade games.</p>"
+
+  arcade:
+    p1: "These extremely popular classic arcade games keep players coming back day after day. Programmed to award %points% for a limited number of daily plays, they can be configured for special community challenges and more to significantly increase your engagement results.<br><br>" #html+
+    learnMore: "You will automatically earn %amount% %points% for each of the first %max% games played every day. You can also compete for placement on the TOP 20 winners Leaderboard to earn achievements. Good luck!"
+
+  #
+  # redeem
+  #
+  redeem:
+    pageDescription: "%points% REWARDS"
+    voucherSubHeader: "Exchange your %points% for the rewards you want most!"
+    lightbox:
+      button: "EXCHANGE %points%"
+    marketing1: ''
+
+  #
+  # voucher response
+  #
+  voucher:
+    success: "<h3 class=\"modal-h2-style\">Congratulations!</h3>
+      <p class=\"body-p modal-body-style\">You Successfully Exchanged <span>%voucherAmount% <span class=\"currency\">__points__</span></span> for <span>%voucherTitle%</span></p>
+      <p class=\"body-p modal-body-style line-height-smaller\">
+        You can download your prize now using the DOWNLOAD YOUR REWARD button below, or access it any time from the MY PRIZES page.
+      </p>"
+
+
+  #
+  # double or nothing
+  #
+  dblng:
+    p1: "<p style='font-size:20px;'><span style='font-size:30px; font-weight:bold;'>Double Your %points%!</span><br /><br /> Decide if the next card will be<br> higher or lower than the card shown.</p>"
+    p2: "<p style='font-size:30px;'>What Do You Think?</p>
+      <p style='font-size:20px;'>Will the next card be <strong>higher</strong> or <strong>lower</strong> than the card showing? Guess correctly
+      to <strong>double</strong> your %pointsawarded% %points%.</p>"
+    response:
+      wronganswerwithbet: "<p class=\"double-or-nothing-header-style\">Better Luck Next Time!</p> You have lost -%pointsawarded% %points%%entries%. Thank you for participating."
+      wronganswer: "<p class=\"double-or-nothing-header-style\">Better Luck Next Time!</p>"
+      thankyou: "<p class=\"double-or-nothing-header-style\">Congratulations!</p>
+        <p class=\"dblng-thankyou-text\">You have earned <br />
+        <span class=\"points-awarded-style\">%pointsawarded% %points%%entries%.</span></p>"
+    no_button: "No Thanks"
+    high_button: "Higher"
+    low_button: "Lower"
+
+  #
+  # bonus code
+  #
+  bonuscode:
+    title: "Bonus Code"
+    # when we use the image
+    # title: "<img class=\"enPortal-img-responsive\" src=\"https://place-hold.it/450x100?text=450 x 100 Image\">"
+
+    p1: "<div class=\"bonuscode-body-headline\">MONTH DAY - MONTH DAY, YEAR
+        <div class=\"simple-modal\" data-class=\"bonuscode-howto-modal\" data-gtm-dimension=\"v2/Home/Initial/Link_Success/Bonus_Code_Details\">HOW TO PLAY BONUS CODE >
+          <span class=\"simple-modal-title hidden\">HOW TO PLAY BONUS CODE</span>
+          <span class=\"simple-modal-content hidden\">
+            <p class=\"body-p-left\">
+              Get an additional reward when you enter a bonus code on <em>%program%</em>.
+            </p>
+            <p class=\"body-p-left\">
+              1. Visit %cname%.<br>
+              2. Earn 100 same day base points on your Players Club Card during your visit.<br>
+              3. Visit the Players Club on the same day you earned your base points to get a bonus code.*<br>
+              4. Enter your code on the <em>%program%</em> website.
+            </p>
+            <p class=\"body-p-left bonuscode-how-to-body-italic\">
+              * Limit one bonus code per day.
+            </p>
+          </span>
+        </div>
+      </div>
+      <p>Enter your bonus code below to win a special reward!</p>"
+    respone:
+      pointsawarded: "<h3 class=\"goGold\">Congratulations!</h3>You have been awarded %amount% %points%." #html+
+
+  #
+  # bonus code bingo
+  #
+  bonuscodebingo:
+    description: "<p class=\"modal-body-style\">Come watch the games with us 10 out of 17 weeks on Sundays and Mondays to get a special bonus code.
+      Get 10 bonus codes and you'll earn special rewards and prizes!</p>
+      <h2 class=\"bingo-header\">Try It Out!</h2>
+      <p class=\"modal-body-style\">Enter <span class=\"bingoCodeExamples\">BB-1</span>, <span class=\"bingoCodeExamples\">BB-2</span>, <span class=\"bingoCodeExamples\">BB-3</span> and <span class=\"bingoCodeExamples\">BB-4</span> in the box below to see how it works.</p>"
+    inputplaceholder: "ENTER YOUR CODE HERE"
+    submit: "ENTER"
+
+  #
+  # survey
+  #
+  survey:
+    p1: "Gain deeper insights into your customers. Build player loyalty by giving them the opportunity to communicate their level of customer service satisfaction, promotional gift preferences, or anything you want to know more about. "
+    thankyou: "Thank you for taking our survey! You were awarded %amount% %currency%."
+
+  #
+  # promo pick 4
+  #
+  pick4Promo:
+    p1: "<p class=\"modal-body-style\">Choose wisely and enjoy your reward.</p>"
+    title: "PICK, CLICK and WIN!"
+    description: "Press the item you like best and win instantly."
+
+  #
+  # quick pick
+  #
+  quickpick:
+    thankyoumessage: "Thank you for playing!<br /> You were awarded %awarded% %points% %msg_dblng%"
+
+  #
+  # level info
+  #
+  level_info:
+    pageheader: "XP Point Prizes"
+    description: "EARN XP POINTS BY PLAYING GAMES EVERY DAY.<br>LEVEL-UP TO EARN A REWARD INSTANTLY!"
+
+
+  #
+  # crossword
+  #
+  crossword:
+    p1: "Challenge your customers to remember your key marketing messages as they search for the words to complete this classic puzzle.   This edutaining game quickly converts them into knowledgeable brand ambassadors and keeps your customers connected with more than 15 minutes per website session." #html+
+    learntoplayinfo: "<p>Click each number on the crossword grid to read the questions and enter your answer without spaces or special characters.</p><p>Each puzzle can only be played once per week so click \"Submit\" only when you have completed as many questions as you can.</p><p>Win 15 %points% for each correct answer.</p>" #html+
+
+  #
+  # casino trivia
+  #
+  casinotrivia:
+    p1: "<p style='font-size:20px;'>Study the image for %time% seconds, memorize the details and answer the question correctly to earn drawing entries!</p>"
+    p2: ""
+    hint: "Hint:&nbsp; %hint%"
+    response:
+      wronganswer: "<p class='modal-body-style'>So Close! Unfortunately, the answer was <span class='points-awarded-style'>%correctSingleAnswer%</span> - but please come back again next week for a chance to earn even more rewards.</p>"
+    readyBtn: "I'm Ready!"
+
+  #
+  # Video Text
+  #
+  video:
+    headerTxt: "Learn how to earn rewards"
+
+  #
+  # facebook
+  #
+  facebook:
+    success:
+      newLoggedIn: "<h3><strong>Success!</strong></h3>
+        <p class=\"modal-body-style\">
+          Your %program% account has been successfully associated with Facebook.
+          <div class=\"spacer\"></div>
+          Press <strong>Facebook Share</strong> again to complete your post and win a nice reward.
+        </p>"
+      loggedIn: "<h3><strong>Success!</strong></h3>
+        <p class=\"modal-body-style\">
+          Your %program% account has been successfully associated with Facebook.
+          <div class=\"spacer\"></div>
+          Press <strong>Facebook Share</strong> again to complete your post and win a nice reward.
+        </p>"
+      portalUserLoggedIn: "<h3>Welcome Back to <strong>%program%</strong> %userName%!</h3>"
+    error:
+      invalidToken: "
+        <p class=\"modal-body-style\">
+          Your Facebook session has timed-out, or you are not logged in.<br>
+          Please log in to Facebook and try again.
+        </p>"
+      noFacebookId: "
+        <p class=\"modal-body-style\">Sorry, we were unable to log you in using your Facebook account.<br>
+          Please make sure you are logged out of Facebook and try again.
+        </p>"
+      noEmail: "
+        <p class=\"modal-body-style\">Unfortunately, we could not log you in using your Facebook account.<br>
+          Please review your Facebook profile and add, or edit, your email address to use the Facebook login feature on
+          %program%.
+        </p>"
+      alreadyInUsed: "
+        <p class=\"modal-body-style\">It seems that the email address for this Facebook account is already
+          in use on %program%.<br>
+          Please try logging in to Facebook using a different account before trying to use this feature to log in to
+          %program% again.
+        </p>"
+      fbNotFound: "
+        <p class=\"modal-body-style\">Sorry, we could not find your Facebook account; please refresh the page
+          and try again.<br>
+          If this problem persists, please contact us via our
+          <span class=\"redirect-to-tab-content\" data-id=\"lt_about\">Help</span> page.
+        </p>"
+      fbNotUser: "
+        <p class=\"modal-body-style\">Unfortunately, we could not \"Share\" this post.<br>
+          The Facebook account specified in your %program% profile is already associated with another account.
+        </p>
+        <div class=\"spacer\"></div>
+        <p class=\"modal-body-style\">
+          Please contact us via our <span class=\"redirect-to-tab-content\" data-id=\"lt_about\">Help</span> page for
+          assistance.
+        </p>"
+      fbAlreadyAssociated: "
+        <p class=\"modal-body-style\">Unfortunately, the Facebook account you are currently logged
+          in with is already associated with another %program% account.
+        </p>
+        <div class=\"spacer\"></div>
+        <p class=\"modal-body-style\">
+          Please contact us via our <span class=\"redirect-to-tab-content\" data-id=\"lt_about\"> Help</span> page for
+          assistance.
+        </p>"
+
+  #
+  # facebook share
+  #
+  share:
+    p1: "Share the <em>Pro Football Frenzy</em> excitement with your friends so they can enjoy fun and prizes all season long and you'll get a nice reward!"
+    p2: ""
+    p3: ""
+    noactive: "<em>Facebook Share</em> is coming soon!"
+
+  #
+  # bonus keys
+  #
+  keys:
+    title: "Find the Key!"
+    p1: "<p>webKEYS are the first step to unlocking the potential of your website. It's a fun, easy, interactive way to increase awareness of any area of your property. It directs traffic to a specific page, increasing its exposure by up to 400% (daily average views).</p>" #html+
+
+  #
+  # casino games
+  #
+  casinogames:
+    p1: "Promote your online social casino or help new players get more comfortable with a variety of typical casino games. These games are a great way to familiarize new players with the kinds of games your offer, and entertain the experts!"
+    learnMore: "Play now to compete for your spot on the leaderboard. Good luck!"
+    flashNotSupported: "<p style=\"color: #fff;\">Games on our website require the Adobe Flash Plugin to play.
+      If you are experiencing problems playing, please obtain the newest flash plugin by clicking the link below.</p>
+      <p style=\"color: #fff;\"><a href=\"https://get.adobe.com/flashplayer/\" target=\"_new\" style=\"color: red;\">https://get.adobe.com/flashplayer/</a></p>"
+
+
+  #
+  # iframe flash message
+  #
+  iframe:
+    noflash: "<p style=\"color: #fff;\">We’re sorry, but this game is not supported on mobile devices.
+      You can enjoy this and other %program% activities on your tablet or computer.</p>"
+
+  #
+  # arcadegames
+  #
+  arcadegames:
+    flashNotSupported: "<p style=\"color: #fff;\">Games on our website require the Adobe Flash Plugin to play.
+      If you are experiencing problems playing, please obtain the newest flash plugin by clicking the link below.</p>
+      <p style=\"color: #fff;\"><a href=\"https://get.adobe.com/flashplayer/\" target=\"_new\" style=\"color: red;\">https://get.adobe.com/flashplayer/</a></p>"
+
+  #
+  # leaderboard
+  #
+  leaderboard:
+    notloggedin: "<p>Login and play now to compete for your spot on the leaderboard. Good luck!</p>" #html+
+
+  #
+  # Entries Lightbox
+  #
+  entries:
+    h3: "Weekly Drawing"
+
+
+  #
+  # authentication
+  #
+  auth:
+    inboxsubject: "Welcome to %program%!"
+    inboxbody: "Dear %name%,<br /><br />Welcome to %program%, our fun, 100% free online rewards program. Login daily to
+      win FREEPLAY, Match Play, dining offers, discounts and more!<br /><br/>%program% is easy as 1, 2, 3...<br /><br />1)
+      Play fun games and exciting activities.<br /><br />2) Earn %currency% (our virtual currency) for your play.<br /><br />3)
+      Redeem your %currency% for FREE prizes in our rewards section.<br /><br />Start by winning %currency% the moment
+      you log in with Spin N Win. In the home or daily play areas, you can also enjoy a wide variety of activities like
+      three card monte, memory match, quick pick, quizzes and more.<br /><br />Double your %currency% after select
+      activities with Feeling Lucky and test your skills by competing for a top spot on the leaderboard with classic
+      arcade and casino games. You can even predict the future with U Pick 'Em to earn even more %currency%!<br /><br />
+      Visit the rewards center to redeem %currency% for the real reward of your choice! Then when you are ready to enjoy
+      it, take your reward voucher to the player's club at %cname% for validation.<br /><br /> It's just that easy to be
+      a winner with %program%. The more you play, the more you can win!<br /><br />%program% Support"
+
+  #
+  # drawings
+  #
+  drawings:
+    activetitle: "Weekly Drawing"
+
+  #
+  # terms and condition
+  #
+  termsAndCondtions:
+    input1: "<span class=\"terms-and-conditions-link\">terms and conditions</span>"
+
+  #
+  # NFL Football Picks
+  #
+  nflFootballPicks:
+    tieBreakerText: "<p>Please enter the <span class=\"text-total\">total yardage</span> for the <span class=\"text-away\">%away%</span> vs <span class=\"text-home\">%home%</span> game.</p>
+      <p class='nflFootballpicks-tie'>(In the event of a tie, the winner is the closest prediction without going over.)</p>"
+    topOfPageCopy: "<h2 class=\"nflFootballPicks-page-header\">Week %week%</h2>
+      <p>* For demonstration purposes, Pigskin Pick 'Em can only be played once.</p>"
+    clockText: "You Have <span id=\"nflFootballPickTimer\">00d 00h 00m 00s</span> to Make Your Picks!"
+    completed: "<h1 class=\"football-modal-header-style\">Your Picks Are In!</h1>
+      <div class=\"football-modal-body-style\">
+        Now go play all the other fun games and activities to earn more drawing entries, XP and Pigskin points!
+      </div>"
+    userPicksTieBreaker: "The <span class=\"text-total\">total yardage</span> you entered for the <span class=\"text-away\">%away%</span> vs <span class=\"text-home\">%home%</span> game is <span class=\"text-total\">%number%</span>."
+
+  #
+  # Experience Bar
+  #
+  experience:
+    nextLevelText: "<button class=\"en-button-animations-shrink-effect\">VIEW PRIZES</button> <span class=\"experience-text-highlight hidden\">%remaining% %points%</span>"
+    experience-bar-text: ""
+    experience-bar-header: "NEXT PRIZE LEVEL:"
+    completed: "<div class=\"completed\"><div class=\"text-center\">NICELY DONE<br /><span>You won all the level-up prizes! Enjoy your rewards.</span></div></div>"
+
+#
+# Email template to confirm registration
+#
+emailConfirmation:
+  body:
+    header: "Welcome to the Frenzy!"
+    txt1: "Thank you for joining Pro Football Frenzy."
+    txt2: "Get your <span style=\"color:#000000\">free %points_per_register% Yards</span> just for confirming your email" #html+
+
+  footer:
+    companywebsite: "mohawkcasino.com"
+    companyadress: "873 State Route 37, Hogansburg, NY 13655"
+    customerservice: "templateblack@engagednation.com"
+    companyname: "Akwesasne Mohawk Casino Resort"
+    companyphone: "877-99-CASINO (US) or 888-622-1155 (CAN)"
+    companysales: ""
+
+  links:
+    unsubscribe: "https://www.silverreefcasino.com/silverpass"
+    emailpreferences: "https://www.silverreefcasino.com/silverpass"
+    privacypolicy: "https://www.silverreefcasino.com/wp-content/uploads/2016/08/SRCPrivacyPolicy_201608021"
+    socialmedia:
+      facebook: "https://www.facebook.com/SilverReefCasino/"
+      hoteladvisor: "http://tripadvisor.com/Hotel_Review-g58472-d619056-Reviews-Silver_Reef_Hotel_Casino_and_Spa-Ferndale_Washington.html"
+      instragram: "https://www.instagram.com/silverreefcasino/"
+      twitter: "https://twitter.com/TheSilverReef/"
+      yelp: "http://www.yelp.com/biz/silver-reef-hotel-casino-and-spa-ferndale/"
+
+#
+# Email template for invite a friend
+#
+emailInvite:
+  body:
+    h1: >-
+      <h1 style="color: #004689;">
+        Get your FREE %alias_points% now!<br> <span>It's</span> as easy as 1, 2, 3...
+      </h1>
+
+  footer:
+    companywebsite: "www.silverreefcasino.com"
+    companyadress: "I-5 Exit 260 4 Min. West | Haxton Way at Slater Road | Ferndale, WA"
+    customerservice: "https://www.silverreefcasino.com/contactus/"
+
+  links:
+    unsubscribe: "https://www.silverreefcasino.com/silverpass"
+    emailpreferences: "https://www.silverreefcasino.com/silverpass"
+    privacypolicy: "https://www.silverreefcasino.com/wp-content/uploads/2016/08/SRCPrivacyPolicy_201608021"
+    socialmedia:
+      facebook: "https://www.facebook.com/SilverReefCasino/"
+      hoteladvisor: "http://tripadvisor.com/Hotel_Review-g58472-d619056-Reviews-Silver_Reef_Hotel_Casino_and_Spa-Ferndale_Washington.html"
+      instragram: "https://www.instagram.com/silverreefcasino/"
+      twitter: "https://twitter.com/TheSilverReef/"
+      yelp: "http://www.yelp.com/biz/silver-reef-hotel-casino-and-spa-ferndale/"
+
+playerscard:
+  note: 'While you can sign up for <em>%program%</em> without entering a Rewards Club card number,
+    <span class="underline">you will not be able to redeem any rewards or instant prizes</span>
+    without adding a valid number to your account. Please sign up for a rewards club card at
+    %property% and enter the number on the <em>%program%</em> MY PROFILE page at your earliest convenience.'
+
+api:
+  instant:
+    reward:
+      sms:
+        noNumberInvalidDisplayMessage: "Please verify that the phone number you entered is a valid U.S. phone number and enter it again."
+        successDisplayMessage: "Access your reward any time by clicking the link in your text message. Enjoy!"
+      notification:
+        message: "<div class=\"message-header\">YOUR REWARD IS EXPIRING</div>You have <span>%amount% reward%plural%</span> about to <span>expire</span>.</span>
+                <br/><span class=\"underLine\">Click here</span> to access your rewards."
+
+questionGroup:
+  notComplete:
+    top:
+      headline: "<div class=\"row nomargin\">
+        <div class=\"col-md-12\">
+            <div class=\"strike\">
+              <span class=\"strikeTitle\">
+                <span class=\"toggle-block\">WEEKLY PREDICTIONS</span>
+              </span>
+            </div>
+          </div>
+        </div>"
+      subheadline: "MAKING WEEKLY PREDICTIONS IS EASY! <div class=\"notComplete-subline\"></div><div class=\"modal-button-wrapper\">
+          <button class=\"btn simple-modal\" data-class=\"prediction-modal\" data-gtm-dimension=\"Challenge/Info\">
+            Learn How
+            <span class=\"simple-modal-title h1-headline-smaller hidden\">PIGSKIN PREDICTIONS</span>
+            <span class=\"simple-modal-content hidden\">
+              <p class=\"body-p-left\">
+                Peer into the future and predict what will happen in the Monday night game in four specific categories--Offense,
+                Defense, Special Teams and Wild Card. For every prediction you get correct, you win a reward. The predictions change
+                each Tuesday, and you can submit your predictions by midnight each Saturday.
+              </p>
+              <div class=\"h4-subheadline-prediction-info\">HOW TO PLAY</div>
+              <p class=\"body-p-left\">1. Read each prediction and press the button next to the answer you believe will be correct.</p>
+              <p class=\"body-p-left\">2. The button will turn blue when you press on it.</p>
+              <p class=\"body-p-left\">3. Review your answers and then press the blue SUBMIT button to submit your answers.</p>
+              <p class=\"body-p\"><em>ONCE YOU SUBMIT, YOU CAN'T GO BACK AND CHANGE YOUR ANSWERS!</em></p>
+              <div class=\"h4-subheadline-prediction-info\">HOW TO CHECK THE RESULTS</div>
+              <p class=\"body-p-left\">Results are <span class=\"goGold\">posted every Tuesday</span>. You can check your answers each week by:</p>
+              <p class=\"body-p-left\">
+                1. Pressing the week number dropdown above the questions and selecting the week you want to view.
+              </p>
+              <p class=\"body-p-left\">
+                <span class=\"goGold\">CORRECT</span> predictions will have a <span class=\"goGold\">GREEN</span> check mark next to them.<br>
+                <span class=\"goGold\">INCORRECT</span> predictions will have a <span class=\"goGold\">RED</span> X next to them.
+              </p>
+              <div class=\"h4-subheadline-prediction-info\">REWARDS</div>
+              <p class=\"body-p-left\">
+                You will be awarded for every correct prediction you make. <span class=\"goGold\">Rewards are
+                automatically added to your totals after scoring is completed.
+              </p>
+            </span>
+          </button>
+        </div>"
+  complete:
+    top:
+      headline: "<div class=\"row nomargin\">
+         <div class=\"col-md-12\">
+             <div class=\"strike\">
+               <span class=\"strikeTitle\">
+                 <span class=\"toggle-block\">WEEKLY PREDICTIONS</span>
+               </span>
+             </div>
+           </div>
+         </div>"
+      subheadline: "CONGRATULATIONS!<br>YOU SUCCESSFULLY SUBMITTED YOUR PREDICTIONS. THE ANSWERS YOU SELECTED ARE DISPLAYED BELOW."
+  submit:
+      error:
+        unknown:
+          title: "HMMM... SOMETHING WENT WRONG"
+          message: "We encountered an error. Please try again."
+        missed:
+          title: "SUBMISSION UNSUCCESSFUL"
+          message: "Unfortunately, these questions can no longer be answered. Please refresh your page."
+        recordFound:
+          title: "HMMM..."
+          message: "Looks like you already submitted your predictions."
+  missed: "Unfortunately, your predictions could not be processed because the submission period has ended."
+
+
+email:
+  response:
+    subject: "Your Pro Football Frenzy voucher is here"
+pickem:
+  comingsoon: "Win a reward for your first Pick 'Em card submitted each week, plus you'll get a shot at winning weekly and season-long prizes and up to $1,000,000 cash for making 225+ correct picks! Get ready to make picks every Tuesday - Saturday starting September 3."
+
+propCard:
+  question:
+    pageSubHeader: "<div class='propcard-page-subheader'>Take a look at the 25 simple questions we've put together about the upcoming <strong>Seattle vs. San Francisco</strong> game on <strong>Sunday, December 5, 2021</strong>. Try to predict what will happen during the game and click the radio button next to the answer you think will be correct. Get all 25 correct and you'll win up to $100,000!</div>"
+  warning1: '<div class="question-warning">
+    <h4><strong>DO NOT SUBMIT YOUR PROP CARD UNTIL YOU ARE SURE!</strong></h4>
+    Once you submit your answers, they cannot be changed. You must submit your $100,000 prop card by <strong>11:59 pm</strong> on <strong>Saturday, December 4, 2021</strong>, in order to be eligible to win. Read the rules for full details. Good luck!</div>'
+  warning2: ''
+  missed: '<div class="h2-subheadline blue-header missed body-subtitle">
+        <strong>THE CHALLENGE HAS ENDED</strong>
+        <p class="body-text margTop20">
+            We are no longer accepting submissions for the $100,000 Prop Card Challenge.<br/>
+            Enjoy our other online games and activities for chances to win more prizes!
+        </p>
+    </div>'
+  submitButtonText: 'SUBMIT YOUR PROP CARD'
+  submit:
+    success:
+      score: ''
+      pageHeader: '<h4 class="propcard-success-h4">YOUR PROP CARD HAS BEEN SUCCESSFULLY SUBMITTED!</h4>
+        <div class="propcard-success-msg">Visit this page again on <strong>Monday, December 6, 2021</strong>, to see how many you got right.</div>'
+      pageHeaderEnd: '<h4 class="propcard-success-h4">CONGRATULATIONS!</h4>
+        <div class="propcard-success-msg">
+          <div>You answered <span class="propcard-score-highlight">%score%</span> questions correctly.</div>
+          <div>We hope you had fun participating in the $100,000 Prop Card Challenge!</div>
+        </div>'
+      pageInfo: '<div class="prop-card-info"><div class="prop-card-info-body">&nbsp;</div> YOUR SELECTIONS</div>'
+      pageInfoEnd: '
+        <div class="prop-card-info"><div class="prop-card-info-body-end">&nbsp;</div> YOUR ANSWERS</div>
+        <div class="prop-card-info"><div class="fal fa-check-circle">&nbsp;</div> CORRECT ANSWERS</div>
+        <div class="prop-card-info"><div class="fal fa-times">&nbsp;</div> WRONG ANSWERS</div>
+        '
+      rules: 'All prize winners will be contacted directly.<div class="read-the-rules"><a href="[s3_uploads_url]/images/pdf/rules-terms.pdf" target="_blank" class="text-link">Read the rules</a> for more details.</div>'
+      pageNote: 'VISIT THIS PAGE AGAIN ON MONDAY, DECEMBER 6, 2021, TO SEE HOW MANY YOU GOT RIGHT.'

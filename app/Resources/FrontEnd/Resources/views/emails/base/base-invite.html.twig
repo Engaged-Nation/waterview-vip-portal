@@ -1,0 +1,70 @@
+{# Client customization should be done at client portal. #}
+
+{% extends 'FrontEnd/Resources/views/emails/base/base.html.twig' %}
+
+{% block headerContainer %}
+    {% include 'FrontEnd/Resources/views/emails/header.html.twig' %}
+{% endblock %}
+
+{% block bodyContainer %}
+    <table style="border: 1px solid #cccccc; background-color:#ffffff;">
+        <tr>
+            <td>
+                {% block bodyContent %}
+                    <table cellpadding="10px">
+                        <tr>
+                            <td>{{ firstName }} has sent you a personal invite to join Pro Football Frenzy, the area's only completely FREE rewards program.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table align="center" cellpadding="5px">
+                                    <tr>
+                                        <td style="font-size:1.4em; font-weight:bold; color:{{ brandColor }};">Get your FREE {{ points }} now! It's as easy as 1, 2, 3...</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table align="center" cellpadding="5px" width="80%">
+                                                <tr>
+                                                    <td>1. Sign Up: Register today for FREE</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2. Play: Enjoy fun games and activities</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3. Win: Receive special rewards and prizes</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table align="center">
+                                    <tr>
+                                        <td>
+                                            <table align="center" cellpadding="20px">
+                                                <tr>
+                                                    <td style="background-color:{{ brandColor }};">
+                                                        <a title="Confirm Now" href="{{ joinLink }}" target="_blank" style="color:#ffffff; font-weight:bold; text-decoration:none;">
+                                                            Join Pro Football Frenzy Today!
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                {% endblock %}
+            </td>
+        </tr>
+    </table>
+{% endblock %}
+
+{% block footerContainer %}
+    {% include 'FrontEnd/Resources/views/emails/footer.html.twig' %}
+{% endblock %}
