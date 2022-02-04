@@ -2,13 +2,13 @@
 /**
  * Contains RoboFile
  *
- * @package grandtraverse
+ * @package waterview-vip
  */
 
 /**
  * @author Joshua Copeland <josh@engagednation.com>
  * @author Matthew Kosolofski <matthew.kosolofski@engagednation.com>
- * @package grandtraverse
+ * @package waterview-vip
  */
 class RoboFile extends \Robo\Tasks
 {

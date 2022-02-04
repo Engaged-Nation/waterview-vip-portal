@@ -1,6 +1,6 @@
 {
     "name": "engaged-nation/grandtraverse-portal",
-    "description": "Grand Traverse Reach Client",
+    "description": "Waterview Casino Reach Client",
     "type": "project",
     "require": {
         "php": "^5.6",
