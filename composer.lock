@@ -1062,12 +1062,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Engaged-Nation/doctrine-portal.git",
-                "reference": "115fec7975a82c690729c5a4c4ba2e1c6a99c0c2"
+                "reference": "037eb43c3fc5ebb4554b9234668ed5a106c663ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Engaged-Nation/doctrine-portal/zipball/115fec7975a82c690729c5a4c4ba2e1c6a99c0c2",
-                "reference": "115fec7975a82c690729c5a4c4ba2e1c6a99c0c2",
+                "url": "https://api.github.com/repos/Engaged-Nation/doctrine-portal/zipball/037eb43c3fc5ebb4554b9234668ed5a106c663ba",
+                "reference": "037eb43c3fc5ebb4554b9234668ed5a106c663ba",
                 "shasum": ""
             },
             "require": {
@@ -1094,7 +1094,7 @@
                 "source": "https://github.com/Engaged-Nation/doctrine-portal/tree/master",
                 "issues": "https://github.com/Engaged-Nation/doctrine-portal/issues"
             },
-            "time": "2022-01-31T17:31:03+00:00"
+            "time": "2022-02-14T19:38:26+00:00"
         },
         {
             "name": "engaged-nation/lib-central-admin-client",
@@ -1223,12 +1223,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Engaged-Nation/portal-core.git",
-                "reference": "ca2cbf4c0e0230f5b0416361d495e170d61f4dfc"
+                "reference": "c0adc51820e3180596aa26eb3d89a8d07801cc6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Engaged-Nation/portal-core/zipball/ca2cbf4c0e0230f5b0416361d495e170d61f4dfc",
-                "reference": "ca2cbf4c0e0230f5b0416361d495e170d61f4dfc",
+                "url": "https://api.github.com/repos/Engaged-Nation/portal-core/zipball/c0adc51820e3180596aa26eb3d89a8d07801cc6b",
+                "reference": "c0adc51820e3180596aa26eb3d89a8d07801cc6b",
                 "shasum": ""
             },
             "require": {
@@ -1279,7 +1279,7 @@
                 "source": "https://github.com/Engaged-Nation/portal-core/tree/master",
                 "issues": "https://github.com/Engaged-Nation/portal-core/issues"
             },
-            "time": "2022-02-03T21:27:18+00:00"
+            "time": "2022-02-15T18:27:32+00:00"
         },
         {
             "name": "grasmash/expander",
