@@ -1223,12 +1223,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Engaged-Nation/portal-core.git",
-                "reference": "c0adc51820e3180596aa26eb3d89a8d07801cc6b"
+                "reference": "3809057a5bba097ed215fd6b41b35239e9a4fd6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Engaged-Nation/portal-core/zipball/c0adc51820e3180596aa26eb3d89a8d07801cc6b",
-                "reference": "c0adc51820e3180596aa26eb3d89a8d07801cc6b",
+                "url": "https://api.github.com/repos/Engaged-Nation/portal-core/zipball/3809057a5bba097ed215fd6b41b35239e9a4fd6c",
+                "reference": "3809057a5bba097ed215fd6b41b35239e9a4fd6c",
                 "shasum": ""
             },
             "require": {
@@ -1279,7 +1279,7 @@
                 "source": "https://github.com/Engaged-Nation/portal-core/tree/master",
                 "issues": "https://github.com/Engaged-Nation/portal-core/issues"
             },
-            "time": "2022-02-15T18:27:32+00:00"
+            "time": "2022-02-21T19:34:02+00:00"
         },
         {
             "name": "grasmash/expander",
